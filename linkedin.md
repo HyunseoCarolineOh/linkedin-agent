@@ -85,6 +85,9 @@ Pick from these based on relevance:
 - When the user asks to share code on GitHub, ALWAYS separate personal and public content
 - NEVER include in public repos: career goals, personal milestones, local file paths, networking strategies, or private project references
 - Public README should only contain: tool description, setup, usage, and content guidelines
+- When including a GitHub link in the post, check if `.public` file exists with a `repo:` field
+  - If yes: use that repo URL
+  - If no: tell the user "Run `/publish` first to create a public repo for this project"
 
 ## Important
 
