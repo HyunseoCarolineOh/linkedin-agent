@@ -38,7 +38,10 @@ Generate a LinkedIn post draft in **English** based on the user's current Claude
    - Minimal emoji (only in Practical Tips tone, as bullet replacements)
    - No AI-generated feel — write like a real person sharing genuine experience
    - NEVER include sensitive info (API keys, passwords, internal URLs, .env values)
-   - End with engagement driver: a question, invitation to share, or teaser for follow-up
+   - NO double blank lines between paragraphs — single paragraph breaks only
+   - NO exaggerated claims — if it took 2 minutes, say 2 minutes, not 2 hours
+   - NO generic CTAs like "What do you think?" or "What's your experience?" — if ending with a question, make it specific and thought-provoking
+   - If the user has a public GitHub repo for the work, include the link before hashtags
 
 4. **Output format** — Present the draft like this:
 
@@ -53,7 +56,12 @@ Generate a LinkedIn post draft in **English** based on the user's current Claude
    Word count: [N]
    ```
 
-5. **Ask for feedback** — After presenting the draft, ask:
+5. **Mine for insight** — Before finalizing the post, ask the user 1-2 questions to find genuine, non-generic insights:
+   - "What surprised you most about this?"
+   - "What was the real value — what problem did this actually solve for you?"
+   - Use their answer to craft the insight paragraph. NEVER fill it with generic process descriptions.
+
+6. **Ask for feedback** — After presenting the draft, ask:
    - Want to adjust the tone? (A/B/C)
    - Any specific angle to emphasize or remove?
    - Ready to copy, or want another version?
@@ -65,6 +73,18 @@ Pick from these based on relevance:
 - **Domain**: #HealthcareIT #DevTools #AgenticAI #AIAgents
 - **Reach**: #FutureOfWork #TechCareers #SiliconValley #StartupLife
 - **Specific**: Use project-relevant tags (#TypeScript #NextJS #Supabase etc.)
+
+## Scheduling Rules
+
+- Default scheduling: California time (Pacific Time) 9:00 AM
+- Convert to user's local timezone when setting LinkedIn scheduler (e.g., 9 AM PT = 1 AM KST next day)
+- Always confirm the converted time with the user before scheduling
+
+## GitHub Deployment Rules
+
+- When the user asks to share code on GitHub, ALWAYS separate personal and public content
+- NEVER include in public repos: career goals, personal milestones, local file paths, networking strategies, or private project references
+- Public README should only contain: tool description, setup, usage, and content guidelines
 
 ## Important
 
